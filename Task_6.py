@@ -23,8 +23,10 @@ def Add_any_3(int_array,num):
                 if sum_int == num:
                     res = [first, sec, int_array[k]]
                     output.append(res)
-                    
-    return output #returns the modified string
-    
-Result = Add_any_3([1, 2, 3, 4, 5, 6], 10)
+    if output == []:
+        return -1
+    else:
+        return output 
+        
+Result = Add_any_3([1, 2, 3, 4, 5, 6], 100)
 print(Result)
