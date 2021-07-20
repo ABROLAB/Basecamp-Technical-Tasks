@@ -14,6 +14,7 @@ Output: { count: 10, numbers: [3, 13, 23, 30, 31, 32, 33, 34, 35] }
 def Count_and_Display(n):
     
     digit = 3
+    count = 0
     int_array = []
     
     # Check all numbers one by one
@@ -22,11 +23,12 @@ def Count_and_Display(n):
         # checking for digit
         for index in str(num):
             if index == str(digit):
+                count += 1
                 #avoid appending same number more than once
                 if num not in int_array:
                     int_array.append(num)
             
-    Output = {"count": len(int_array), "numbers": int_array}        
+    Output = {"count": count, "numbers": int_array}        
     return Output
     
 print(Count_and_Display(35))
